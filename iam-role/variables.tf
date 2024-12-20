@@ -14,6 +14,12 @@ variable "oidc_provider_arn" {
   default     = ""
 }
 
+variable "create_oidc" {
+  description = "Create the GitHub OIDC Provider."
+  type        = string
+  default     = ""
+}
+
 variable "oidc_audience" {
   description = "Audience supplied to configure-aws-credentials."
   type        = string
