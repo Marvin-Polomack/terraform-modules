@@ -6,6 +6,7 @@ resource "aws_iam_openid_connect_provider" "github_oidc" {
 }
 
 resource "aws_iam_role" "role" {
+  name               = replace(var.repository_name, "/[^a-zA-Z0-9]/", "")
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
