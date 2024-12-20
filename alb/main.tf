@@ -2,7 +2,7 @@
 resource "aws_security_group" "alb_sg" {
   name        = "${var.name}-sg"
   description = "Security group for ALB"
-  vpc_id      = aws_vpc.k8s_vpc.id  # Replace with your VPC ID
+  vpc_id      = var.vpc_id  # Replace with your VPC ID
 
   ingress {
     from_port   = 80
