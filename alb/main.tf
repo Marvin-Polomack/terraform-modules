@@ -75,7 +75,7 @@ resource "aws_lb_target_group" "tg" {
   port        = 3000
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
-  target_type = "instance"  # Route traffic directly to EC2 instances
+  target_type = "ip"  # Route traffic directly to EC2 instances
 
   health_check {
     path                = "/"
