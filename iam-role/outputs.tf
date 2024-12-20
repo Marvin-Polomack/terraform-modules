@@ -3,5 +3,5 @@ output "role_arn" {
 }
 
 output "oidc_provider_arn" {
-  value = aws_iam_openid_connect_provider.github_oidc[0].arn
+  value = var.oidc_provider_arn == "" ? aws_iam_openid_connect_provider.github_oidc[0].arn : var.oidc_provider_arn
 }
