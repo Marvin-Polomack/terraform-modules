@@ -16,8 +16,8 @@ variable "oidc_provider_arn" {
 
 variable "create_oidc" {
   description = "Create the GitHub OIDC Provider."
-  type        = string
-  default     = ""
+  type        = bool
+  default     = false
 }
 
 variable "oidc_audience" {
