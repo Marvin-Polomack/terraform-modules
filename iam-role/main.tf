@@ -29,3 +29,8 @@ resource "aws_iam_role" "role" {
   })
   depends_on = [ aws_iam_openid_connect_provider.github_oidc ]
 }
+
+resource "aws_iam_role_policy_attachment" "role_policy" {
+  role       = aws_iam_role.role.name
+  policy_arn = "sts:AssumeRoleWithWebIdentity"
+}
