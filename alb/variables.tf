@@ -17,8 +17,3 @@ variable "vpc_id" {
     description = "ALB VPC ID"
     type = string
 }
-
-variable "target_id" {
-    description = "Target Instance ID"
-    type = string
-}
